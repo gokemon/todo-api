@@ -2,7 +2,7 @@
 var mongoose = require('mongoose'),
     Task = mongoose.model('Tasks');
 
-
+/* all teh CRUD tasks code */
 exports.read_all_tasks = function(req, res) {
     Task.find({}, function(err, task) {
         if (err)
@@ -47,5 +47,5 @@ exports.delete_a_task = function(req, res) {
         if (err)
             res.send(err);
         res.json({ message: 'Task successfully deleted' });
-    });
+    }); // do I want to put more messages in here?
 };

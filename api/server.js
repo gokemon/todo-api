@@ -4,8 +4,11 @@ var express = require('express'),
     mongoose = require('mongoose'),
     Task = require('./models/todoModel'),
     bodyParser = require('body-parser');
+// so the var, and comma, and semi-colon, makes this one large block.
+// normally I put one require per one var line.
 
 
+// normally "app = express();" goes here
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/todo-api-db');
 // this could be moved to a config file
@@ -23,3 +26,4 @@ routes(app);
 
 app.listen(port);
 console.log('todo-api server started on: ' + port);
+// can remove the log message later

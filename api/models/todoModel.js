@@ -1,7 +1,9 @@
 'use strict';
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
+// ok, so we don't call the database, just build the model here
+// the database should be configured in a config file, 
+// same place the process env is set to dev or production
 
 
 var TaskSchema = new Schema({
